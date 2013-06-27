@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D11C6B2177BC0DA00C4DDC5 /* firstWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D11C6B1177BC0DA00C4DDC5 /* firstWindow.cpp */; };
+		1D11C6B7177BC16800C4DDC5 /* CWUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D11C6B6177BC16800C4DDC5 /* CWUtilities.cpp */; };
+		1D11C6B9177BC58B00C4DDC5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D11C6B8177BC58B00C4DDC5 /* main.cpp */; };
+		1D11C6BB177BC9DA00C4DDC5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D11C6BA177BC9DA00C4DDC5 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +26,11 @@
 
 /* Begin PBXFileReference section */
 		1D11C6A4177BC00F00C4DDC5 /* openGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = openGL; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D11C6B1177BC0DA00C4DDC5 /* firstWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = firstWindow.cpp; path = src/firstWindow.cpp; sourceTree = "<group>"; };
 		1D11C6B4177BC0EC00C4DDC5 /* CWOpenGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CWOpenGL.h; path = inc/CWOpenGL.h; sourceTree = "<group>"; };
 		1D11C6B5177BC0EC00C4DDC5 /* CWUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CWUtilities.h; path = inc/CWUtilities.h; sourceTree = "<group>"; };
+		1D11C6B6177BC16800C4DDC5 /* CWUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CWUtilities.cpp; path = src/CWUtilities.cpp; sourceTree = "<group>"; };
+		1D11C6B8177BC58B00C4DDC5 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		1D11C6BA177BC9DA00C4DDC5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D11C6BB177BC9DA00C4DDC5 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,7 @@
 		1D11C69B177BC00F00C4DDC5 = {
 			isa = PBXGroup;
 			children = (
+				1D11C6BA177BC9DA00C4DDC5 /* OpenGL.framework */,
 				1D11C6B3177BC0DE00C4DDC5 /* inc */,
 				1D11C6B0177BC0BF00C4DDC5 /* src */,
 				1D11C6A5177BC00F00C4DDC5 /* Products */,
@@ -60,7 +66,8 @@
 		1D11C6B0177BC0BF00C4DDC5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1D11C6B1177BC0DA00C4DDC5 /* firstWindow.cpp */,
+				1D11C6B6177BC16800C4DDC5 /* CWUtilities.cpp */,
+				1D11C6B8177BC58B00C4DDC5 /* main.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -125,7 +132,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D11C6B2177BC0DA00C4DDC5 /* firstWindow.cpp in Sources */,
+				1D11C6B7177BC16800C4DDC5 /* CWUtilities.cpp in Sources */,
+				1D11C6B9177BC58B00C4DDC5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,15 @@
 		1D11C6AE177BC00F00C4DDC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"\"/usr/local/include\"",
+					"\"/opt/X11/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"/usr/local/lib\"",
+					"\"/opt/X11/include\"",
+				);
+				OTHER_LDFLAGS = "-lGLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -201,6 +218,15 @@
 		1D11C6AF177BC00F00C4DDC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"\"/usr/local/include\"",
+					"\"/opt/X11/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"/usr/local/lib\"",
+					"\"/opt/X11/include\"",
+				);
+				OTHER_LDFLAGS = "-lGLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
