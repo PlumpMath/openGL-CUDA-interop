@@ -36,6 +36,9 @@ int main( int argc, char *args[] ) {
         return 1;
     }
     
+    // Set keyboard handler
+    glutKeyboardFunc( handleKeys );
+    
     // Set rendering function
     glutDisplayFunc( renderBuffer );
     
