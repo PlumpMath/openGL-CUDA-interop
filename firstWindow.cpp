@@ -7,9 +7,9 @@ This is the actual usage of the OpenGL library.
 The following code is the same for any platform */
 void renderFunction()
 {
-    glClearColor(0.0, 0.0, 0.0, 0.0);
+    glClearColor(0.0, 0.1, 0.0, 0.0);
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0, 1.0, 1.0);
+    glColor3f(1.0, 0.5, 1.0);
     glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
     glBegin(GL_POLYGON);
         glVertex2f(-0.5, -0.5);
